@@ -10,7 +10,7 @@ module Liquid
       end
 
       initializer 'liquid-rails.include_partial' do |app|
-        template_path = ::Rails.root.join('app/views')
+        template_path = ::Rails.root.join('app/templates')
         Liquid::Template.file_system = Liquid::Rails::FileSystem.new(template_path)
       end
 
